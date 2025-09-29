@@ -1,0 +1,2 @@
+cls
+pytest .\test\scripts\
