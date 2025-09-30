@@ -5,8 +5,9 @@ class TensorHomePage(BasePage):
     ABOUT_URL = 'https://tensor.ru/about'
 
     def find_people_power(self):
+        assert self.check_exists_element(Locator.people_power)
         self.people_power_block = self.find_element(Locator.people_power)
-        assert self.people_power_block.is_enabled()
+
 
     def click_about(self):
         block_parent = self.get_elements_parent(self.people_power_block)

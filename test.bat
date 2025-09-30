@@ -1,2 +1,2 @@
 cls
-pytest .\test\scripts\
+pytest -s .\test\scripts\
