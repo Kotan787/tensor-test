@@ -1,5 +1,3 @@
-from time import sleep
-
 from src.page_object.pages.saby_contacts_page import SabyContactPage
 from src.page_object.pages.saby_main_page import SabyMainPage
 
@@ -23,3 +21,4 @@ def test_second(driver):
     new_partners_list = contacts_page.get_partners_list()
 
     assert old_partners_list != new_partners_list or old_partners_list not in new_partners_list
+

@@ -12,7 +12,8 @@ class SabyContactPage(BasePage):
 
     def check_region(self,region):
         self.check_exists_element(Locator.region)
-        assert region in self.find_element(Locator.region).text
+        region_block = self.find_element(Locator.region).text
+        assert region in region_block
 
     def check_region_url(self, region):
         assert region in self.get_current_url()
