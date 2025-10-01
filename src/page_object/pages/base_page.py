@@ -28,6 +28,8 @@ class BasePage:
 
     def find_element_in_element(self,element,locator):
         return element.find_element(By.XPATH,locator)
+    def wait_loading_page(self):
+        self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "html")))
 
     def check_exists_element(self,locator):
         try:

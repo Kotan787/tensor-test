@@ -1,2 +1,2 @@
 cls
-pytest -s .\test\scripts\
+pytest -n auto -s .\test\scripts\

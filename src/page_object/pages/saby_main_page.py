@@ -7,3 +7,5 @@ class SabyMainPage(BasePage):
 
     def click_office_link(self):
         self.click(Locator.offices)
+    def click_download(self):
+        self.click(Locator.downloads)
