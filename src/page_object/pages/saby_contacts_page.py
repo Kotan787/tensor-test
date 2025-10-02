@@ -9,10 +9,14 @@ class SabyContactPage(BasePage):
     def change_region(self):
         self.click(Locator.region)
         self.click(Locator.new_region_select_link)
-        self.wait_loading_page()
+
 
     def check_region(self,region):
         self.check_exists_element(Locator.region)
+        try:
+            self.wait_text_in_element(Locator.region, region)
+        except:
+            raise Exception('Выбранный регион:' + self.find_element(Locator.region).text + ', ожидаемый регион: '+ region)
         assert region in self.find_element(Locator.region).text
 
     def check_region_url(self, region):

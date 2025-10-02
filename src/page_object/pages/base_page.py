@@ -28,8 +28,9 @@ class BasePage:
 
     def find_element_in_element(self,element,locator):
         return element.find_element(By.XPATH,locator)
-    def wait_loading_page(self):
-        self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "html")))
+
+    def wait_text_in_element(self,locator,text):
+        return WebDriverWait(self.driver, 10).until(EC.text_to_be_present_in_element((By.XPATH,locator), text))
 
     def check_exists_element(self,locator):
         try:
